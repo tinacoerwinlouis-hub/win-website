@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erwin Louis P. Tinaco | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Erer</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content">
+            <div class="tagline">IT Student & Developer</div>
+            <h1>Hi, I'm <span class="highlight-name">Erwin Louis P. Tinaco</span> — <br>I build products for the web and the <span class="highlight-digital">digital</span> world.</h1>
+            <p class="hero-description">
+                A passionate IT student with a knack for creating clean, functional, and meaningful software experiences.
+            </p>
+        </div>
+
+        <div class="outer-cosmic-card">
+            <div class="glowing-ring">
+                <img src="c:\Users\Admin\Downloads\Gemini_Generated_Image_x680ivx680ivx680.png" alt="Erwin Louis P. Tinaco Portrait Image" class="profile-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-box">
+            <p>Welcome to my portfolio!</p>
+            <p>I am a first-year <strong>Bachelor of Science in Information Technology (BSIT)</strong> student at <strong>Davao del Norte State College</strong>.</p>
+            <p>My academic focus spans exploring backend algorithms alongside creating structured front-end interfaces. I look at system engineering as an opportunity to simplify workflows through organized programming architectures.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-grid">
+            
+            <div class="skill-card">
+                <h3>Backend Programming</h3>
+                <p>Constructing logical applications, software architectures, and handling structural workflows.</p>
+                <div class="tagpool" style="margin-top: 15px;">
+                    <span class="skill-tag">Java Language</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>Designing modern, responsive layout architectures cleanly across separate digital interfaces.</p>
+                <div class="tagpool" style="margin-top: 15px; display: flex; gap: 8px;">
+                    <span class="skill-tag blue">HTML5</span>
+                    <span class="skill-tag blue">CSS3</span>
+                    <span class="skill-tag blue">Bootstrap</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">My <span>Projects</span></h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="project-display-box">&lt;/&gt;</div>
+                <div class="project-details">
+                    <h3>Portfolio Website</h3>
+                    <p>A sleek, premium portfolio designed with deep background ambient gradients and fully optimized typography viewports.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-display-box">📋</div>
+                <div class="project-details">
+                    <h3>Ordering System</h3>
+                    <p>An application system template constructed to securely processes user inputs and layout logs.</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-display-box">🏖️</div>
+                <div class="project-details">
+                    <h3>Beach Resort Website</h3>
+                    <p>An expansive platform interface showcasing locations, services, and dynamic responsive elements.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact <span>Me</span></h2>
+        <div class="contact-content-box">
+            
+            <div class="contact-info-list">
+                <div class="info-item">
+                    <label>Email Address</label>
+                    <a href="mailto:erwin18@gmail.com">erwin18@gmail.com</a>
+                </div>
+                <div class="info-item">
+                    <label>Contact Number</label>
+                    <span>09518420218</span>
+                </div>
+                <div class="info-item">
+                    <label>Facebook Account</label>
+                    <a href="https://facebook.com" target="_blank">erwin</a>
+                </div>
+                <div class="info-item">
+                    <label>Current Location</label>
+                    <span>Prk 8 Lorsing, Brgy. San Vicente, Panabo City</span>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+                <p style="color: #9b95a6; line-height: 1.7; margin-bottom: 15px;">Have a project mind or looking to collaborate? Feel free to ping my inbox or call directly anytime.</p>
+                <a href="mailto:erwin18@gmail.com" class="btn-email-action">Send Me an Email</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll("nav ul li a");
+
+        window.addEventListener("scroll", () => {
+            let activeSectionId = "";
+            sections.forEach((section) => {
+                const sectionTopOffset = section.offsetTop;
+                if (pageYOffset >= sectionTopOffset - 160) {
+                    activeSectionId = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach((link) => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${activeSectionId}`) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
